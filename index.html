@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tubbees</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="section1"></div>
+<div class="hero-section-wrapper">
+
+    <!-- Navbar -->
+    <div id="navBar">
+        <img src="images/logo.png" id="logoImg" alt="Tubbees logo">
+        <div id="sections">
+            <a href="#section1" data-i18n="navHome">Home</a>
+            <a href="#section2" data-i18n="navPerfumes">Perfumes</a>
+            <a href="#section3" data-i18n="navMatch">Perfect Match</a>
+            <a href="#section4" data-i18n="navBlog">Blog</a>
+            <a href="#section5" data-i18n="navAbout">About Us</a>
+            <a href="#section6" data-i18n="navContact">Contact Us</a>
+            <p id="langToggle">
+                <span class="active" data-lang="EN">EN</span><span class="divider">|</span><span data-lang="MK">MK</span>
+            </p>
+            <button class="nav-icon-btn" id="navSearchBtn" title="Search">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+            <button class="nav-icon-btn" id="navCartBtn" title="Shopping Cart">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                <span class="cart-badge" id="cartBadge">0</span>
+            </button>
+        </div>
+    </div>
+    <!-- SECTION ONE: HOME PAGE -->
+    <main class="hero-container">
+        <div class="hero-text">
+            <h1 class="hero-title"><br><br>
+                <span class="caramel-trick" data-i18n="heroTitle1">Indulge Your<br>Senses</span>
+                <span class="dark-brown-trick" data-i18n="heroTitle2">in<br>Every Scoop<br>of Scent.</span>
+            </h1>
+            <p class="hero-subtitle dark-brown-trick" data-i18n="heroSubtitle">
+                Discover the perfume that's too sweet to resist. Playful. Unique. Unforgettable.
+            </p>
+            <a href="#section2">
+                <button class="hero-btn" data-i18n="heroBtn">EXPLORE THE TUBBEES COLLECTION</button>
+            </a>
+        </div>
+
+        <div class="showcase-wrapper">
+            <div class="circle-wrapper">
+                <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+                <div class="hero-circle"></div>
+
+                <div class="slider-viewport">
+                    <img src="images/praline-Photoroom.png" class="slider-img" data-title-key="praline" alt="Golden Praline Bliss">
+                    <img src="images/lemon-Photoroom.png" class="slider-img" data-title-key="lemon" alt="Lemon">
+                    <img src="images/mango-Photoroom.png" class="slider-img" data-title-key="mango" alt="Mango">
+                    <img src="images/matcha-Photoroom.png" class="slider-img" data-title-key="matcha" alt="Matcha">
+                    <img src="images/passion-Photoroom.png" class="slider-img" data-title-key="passion" alt="Passion Fruit">
+                    <img src="images/tiramisu-Photoroom.png" class="slider-img" data-title-key="tiramisu" alt="Tiramisu">
+                    <img src="images/tres-Photoroom.png" class="slider-img" data-title-key="tres" alt="Tres Leches">
+                </div>
+
+                <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+            </div>
+
+            <div class="flavor-badge" id="flavorBadge">Blueberry</div>
+            <div class="slide-hint" data-i18n="slideHint">Slide to discover &rarr;</div>
+
+            <div class="dots-container" id="dotsContainer"></div>
+        </div>
+    </main>
+
+</div>
+
+<!-- SECTION TWO: PERFUMES COLLECTION -->
+<section class="perfumes-section force-cream-bg" id="section2">
+    <h2 class="section-title caramel-trick" data-i18n="sec2Title">Which Scoop Speaks to You?</h2>
+    <p class="section-subtitle dark-brown-trick" data-i18n="sec2Subtitle">Find your sweet match among our signature scents</p>
+
+    <div class="perfumes-container">
+        <div class="perfume-grid" id="perfumeGrid">
+        </div>
+    </div>
+</section>
+<div id="section3"></div>
+<!-- SECTION THREE: PERFECT MATCH QUIZ -->
+<section class="perfect-match-section">
+    <h2 class="quiz-intro-title dark-brown-trick" data-i18n="sec3Title">Find Your Perfect Scent</h2><br>
+    <p class="quiz-intro-subtitle" data-i18n="sec3Subtitle">Take our quick scent quiz to discover the custom perfume mix crafted for your personality.</p>
+    <button class="quiz-start-btn" id="startQuizBtn" data-i18n="startQuizBtn">Take the Quiz</button>
+    <br><br><br>
+    <div class="carousel-container">
+        <div class="carousel-track" id="carouselTrack">
+            <div class="polaroid tilt-left"><div class="frame"><img src="images/promo1.png" alt="Promo 1"></div></div>
+            <div class="polaroid tilt-right"><div class="frame"><img src="images/promo2.png" alt="Promo 2"></div></div>
+            <div class="polaroid tilt-left-sm"><div class="frame"><img src="images/promo3.png" alt="Promo 3"></div></div>
+            <div class="polaroid tilt-right-sm"><div class="frame"><img src="images/promo4.png" alt="Promo 4"></div></div>
+            <div class="polaroid tilt-left"><div class="frame"><img src="images/promo5.png" alt="Promo 5"></div></div>
+            <div class="polaroid tilt-right"><div class="frame"><img src="images/promo6.png" alt="Promo 6"></div></div>
+            <div class="polaroid tilt-left-sm"><div class="frame"><img src="images/promo7.png" alt="Promo 7"></div></div>
+            <div class="polaroid tilt-right-sm"><div class="frame"><img src="images/promo8.png" alt="Promo 8"></div></div>
+        </div>
+    </div>
+</section>
+<div class="modal-overlay" id="searchModal">
+    <div class="search-modal-card">
+        <button class="modal-close" id="searchModalClose">&times;</button>
+        <div class="quiz-header" style="margin-bottom: 16px;">
+            <h3 class="quiz-title" data-i18n="searchTitle">Search Collection</h3>
+        </div>
+        <div class="search-input-wrapper">
+            <input type="text" id="searchInput" class="search-input" placeholder="Type a perfume name or scent note..." autocomplete="off">
+        </div>
+        <div class="search-results-list" id="searchResults">
+        </div>
+    </div>
+</div>
+<div class="modal-overlay" id="quizModal">
+    <div class="quiz-modal-card">
+        <button class="modal-close" id="quizModalClose">&times;</button>
+        <div class="quiz-header">
+            <h3 class="quiz-title" data-i18n="quizModalTitle">Pick Your Scent Notes</h3>
+            <p class="quiz-instruction" data-i18n="quizModalInstruction">Select 3 scents that describe your mood best</p>
+        </div>
+
+        <div class="scents-grid" id="scentsGrid">
+        </div>
+        <div class="quiz-footer">
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="quizProgressBar"></div>
+            </div>
+            <button class="get-match-btn" id="getMatchBtn" data-i18n="getMatchBtn">Get Your Match</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="matchResultModal">
+    <div class="modal-card">
+        <button class="modal-close" id="matchResultClose">&times;</button>
+
+        <div class="modal-main-content">
+            <div class="scent-facts-container">
+                <div class="match-result-box">
+                    <span class="section-badge" style="background-color: #A25F2B; color: #FFF; margin-bottom: 20px;" data-i18n="matchBadge">99% Match!</span>
+                    <h3 style="color: #FFF; font-size: 2rem; margin: 0 0 10px 0;" id="matchResultName">Tres Leches</h3>
+                    <p style="color: #A25F2B; font-weight: 700; margin: 0 0 20px 0; font-size: 1.1rem;" id="matchResultTagline">Velvety, milky, golden bakery.</p>
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: #E6C49E; margin-bottom: auto;" id="matchResultDesc">
+                        Fluffy sponge cake drenched in sweet condensed milk, evaporated cream, and warm vanilla syrup.
+                    </p>
+
+                    <div class="match-btn-group">
+                        <button class="match-action-btn retake-btn" id="retakeQuizBtn" data-i18n="retakeBtn">Retake Quiz</button>
+                        <a href="#section2" class="match-action-btn facts-btn" id="fragranceFactsBtn" data-i18n="factsBtn">Fragrance Facts</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-product-display">
+                <div class="modal-image-container">
+                    <img id="matchResultImg" src="" alt="Perfume Match" class="modal-product-img">
+                </div>
+                <h3 id="matchResultTitle" class="modal-product-title">Tres Leches</h3>
+                <div id="matchResultSubTagline" class="modal-product-tagline">Velvety, milky, golden bakery.</div>
+                <div class="modal-badges-row">
+                    <span class="badge-pill" id="matchBadgeConc">EAU DE PARFUM • 15%</span>
+                    <span class="badge-pill" id="matchBadgeSize">Size: 50 ml / 1.7 fl.oz</span>
+                    <span class="badge-pill" id="matchBadgePrice">Price: €13</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="perfumeModal">
+    <div class="modal-card">
+        <button class="modal-close" id="modalClose">&times;</button>
+
+        <div class="modal-main-content">
+            <div class="scent-facts-container">
+                <div class="scent-facts-box">
+                    <h3 class="sf-title" data-i18n="sfTitle">FRAGRANCE FACTS</h3>
+                    <div class="sf-subtitle" id="sfPerfumeName">Matcha Made In Heaven</div>
+                    <div class="sf-divider"></div>
+
+                    <div class="sf-line-item">
+                        <span class="label" data-i18n="sfServingSizeLabel">Serving size</span>
+                        <span class="val" id="sfServingSize">1 spray</span>
+                    </div>
+                    <div class="sf-line-item">
+                        <span class="label" data-i18n="sfConcentrationLabel">Concentration</span>
+                        <span class="val" id="sfConcentration">EAU DE PARFUM 15%</span>
+                    </div>
+
+                    <div class="sf-section-header" data-i18n="sfTopNotes">TOP NOTES</div>
+                    <div id="sfTopNotesList"></div>
+
+                    <div class="sf-section-header" data-i18n="sfHeartNotes">HEART NOTES</div>
+                    <div id="sfHeartNotesList"></div>
+
+                    <div class="sf-section-header" data-i18n="sfBaseNotes">BASE NOTES</div>
+                    <div id="sfBaseNotesList"></div>
+
+                    <div class="sf-separator"></div>
+
+                    <div class="sf-metric-row">
+                        <span class="sf-metric-name" data-i18n="sfSweetness">Sweetness</span>
+                        <div class="sf-bar-bg"><div class="sf-bar-fill" id="sfSweetnessBar"></div></div>
+                        <span class="sf-metric-val" id="sfSweetnessVal">26%</span>
+                    </div>
+                    <div class="sf-metric-row">
+                        <span class="sf-metric-name" data-i18n="sfWarmth">Warmth</span>
+                        <div class="sf-bar-bg"><div class="sf-bar-fill" id="sfWarmthBar"></div></div>
+                        <span class="sf-metric-val" id="sfWarmthVal">30%</span>
+                    </div>
+                    <div class="sf-metric-row">
+                        <span class="sf-metric-name" data-i18n="sfCozy">Cozy</span>
+                        <div class="sf-bar-bg"><div class="sf-bar-fill" id="sfCozyBar"></div></div>
+                        <span class="sf-metric-val" id="sfCozyVal">40%</span>
+                    </div>
+                </div>
+
+                <button class="add-to-cart-btn" id="modalAddToCartBtn" data-i18n="addToCart">Add to Cart</button>
+            </div>
+
+            <div class="modal-product-display">
+                <div class="modal-image-container">
+                    <img id="modalImg" src="" alt="Perfume Preview" class="modal-product-img">
+                </div>
+                <h3 id="modalTitle" class="modal-product-title">Matcha Made In Heaven</h3>
+                <div id="modalTagline" class="modal-product-tagline">Earthy, creamy, quietly addictive.</div>
+                <p id="modalDesc" class="modal-product-desc">
+                    Ceremonial matcha and green tea leaf over a creamy latte heart with rice milk, drying down to white musk. Calm, green and deeply chic.
+                </p>
+                <div class="modal-badges-row">
+                    <span class="badge-pill" id="badgeConc">EAU DE PARFUM • 15%</span>
+                    <span class="badge-pill" id="badgeSize">Size: 50 ml / 1.7 fl.oz</span>
+                    <span class="badge-pill" id="badgePrice">Price: €13</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommendations-section">
+            <h4 class="recommendations-title" data-i18n="recTitle">You might also like...</h4>
+            <div class="recommendations-grid" id="recommendationsGrid"></div>
+        </div>
+    </div>
+</div>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+        <h3 data-i18n="cartTitle">Your Cart</h3>
+        <button class="cart-close-btn" id="cartCloseBtn">&times;</button>
+    </div>
+    <div class="cart-body" id="cartBody"></div>
+    <div class="cart-footer">
+        <div class="cart-total-row">
+            <span data-i18n="cartTotalLabel">Total:</span>
+            <span id="cartTotalVal">€0</span>
+        </div>
+        <button class="checkout-btn" data-i18n="checkoutBtn">Proceed to Checkout</button>
+    </div>
+</div>
+<!-- SECTION FOUR: BLOG -->
+<section class="blog-section" id="section4">
+    <div class="blog-container">
+        <span class="section-badge" style="background-color: rgba(230, 196, 158, 0.15); color: #E6C49E;" data-i18n="blogBadge">Fragrance Journal</span>
+        <h2 class="section-title caramel-trick" style="margin-top: 10px;" data-i18n="blogSectionTitle">Perfume Chronicles & Tips</h2>
+        <p class="section-subtitle" style="color: #E6C49E;" data-i18n="blogSectionSubtitle">Master the art of wearing, selecting, and preserving your favorite scents.</p>
+
+        <div class="blog-carousel-wrapper">
+            <button type="button" class="carousel-btn left" id="blogPrevBtn" aria-label="Previous blogs">&larr;</button>
+
+            <div class="blog-grid" id="blogGrid">
+            </div>
+
+            <button type="button" class="carousel-btn right" id="blogNextBtn" aria-label="Next blogs">&rarr;</button>
+        </div>
+    </div>
+</section>
+
+<div class="blog-modal" id="blogModal" onclick="closeBlogModalOnBg(event)">
+    <div class="blog-modal-content">
+        <button type="button" class="blog-modal-close" onclick="closeBlogModal()">&times;</button>
+        <img src="" alt="Blog popup detail image" class="blog-modal-img" id="modalImgBlog">
+        <span class="blog-tag" id="modalTag"></span>
+        <h2 class="blog-title" id="modalTitleBlog" style="font-size: 1.6rem; margin: 10px 0 15px 0; color: #FFFFFF;"></h2>
+        <div class="blog-modal-body" id="modalBody"></div>
+    </div>
+</div>
+<!-- ABOUT US SECTION -->
+
+<section class="about-us-section" id="section5">
+    <div class="about-container">
+        <div class="about-header">
+            <h2 class="quiz-intro-title dark-brown-trick" data-i18n="aboutTitle">About Us</h2>
+            <p class="about-intro" data-i18n="aboutIntro">
+                Tubbees is the fragrance brand that turns the art of scent into a celebration of flavor. Founded with a simple goal—to capture the essence of your favorite indulgent flavors and bring them to life in a bottle. We’ve mastered the art of creating scents that transport you straight to a world of sweet treats, rich desserts, and comforting flavors. It’s like your favorite dessert—without the calories!
+            </p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="card-badge">CEO</div>
+                <h4>Shamly Sud</h4>
+                <span class="role" data-i18n="role1">Managing Director / CEO</span>
+                <p data-i18n="desc1">
+                    The primary public face and lead director running the entire corporate ecosystem.
+                    Every major decision regarding brand vision, new locations, and company strategy
+                    goes through her.
+                </p>
+            </div>
+            <div class="team-card">
+                <div class="card-badge">COO</div>
+                <h4>Vikas Sud</h4>
+                <span class="role" data-i18n="role2">Director / COO</span>
+                <p data-i18n="desc2">
+                    Co-director of the parent company, managing the operational blueprint,
+                    legal oversight, and corporate asset management alongside Shamly.
+                </p>
+            </div>
+            <div class="team-card">
+                <div class="card-badge">Director</div>
+                <h4>Guna Sud</h4>
+                <span class="role" data-i18n="role3">Director</span>
+                <p data-i18n="desc3">
+                    Core member of the family board of directors holding key legal and operational
+                    leadership across the retail and dessert business empire.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- FOOTER SECTION -->
+<footer class="site-footer" id="section6">
+    <div class="footer-container">
+        <div class="footer-info">
+            <img src="images/logo.png" width="200px" alt="Tubbees logo">
+            <p class="footer-description" data-i18n="footerDesc">
+                Crafting unique fragrance and flavor experiences.
+            </p>
+
+            <div class="contact-details">
+                <p><strong data-i18n="emailLabel">Email:</strong> support@tubbees.com</p>
+                <p><strong data-i18n="phoneLabel">Phone:</strong> 123 456 789</p>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/itstubbees/?hl=en" aria-label="Instagram">Instagram: @itstubbees</a>
+                <a href="https://www.facebook.com/itstubbees/" aria-label="Facebook">Facebook: @itstubbees</a>
+                <a href="https://www.tiktok.com/@itstubbees" aria-label="TikTok">TikTok: @itstubbees</a>
+            </div>
+        </div>
+        <div class="footer-form-wrapper">
+            <h4 data-i18n="touchTitle">Get in Touch</h4>
+            <p data-i18n="touchSubtitle">Have questions or feedback? Send us a message.</p>
+
+            <form class="footer-contact-form" action="#" method="POST" id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required data-i18n-ph="phName" />
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required data-i18n-ph="phEmail" />
+                </div>
+
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="4" placeholder="Your Message" required data-i18n-ph="phMessage"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn" data-i18n="sendBtn">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Copyright Bar -->
+    <div class="footer-bottom">
+        <p data-i18n="copyright">&copy; 2026 Tubbees. All rights reserved.</p>
+    </div>
+</footer>
+<div id="cookie-banner" class="cookie-banner hidden">
+    <p data-i18n="cookieMsg">This website uses cookies to improve the user experience and save your preferences.</p>
+    <div class="cookie-buttons">
+        <button id="accept-cookies" data-i18n="acceptCookies" onclick="acceptCookies()">Accept All</button>
+        <button id="reject-cookies" data-i18n="rejectCookies" onclick="rejectCookies()">Reject All</button>
+    </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
